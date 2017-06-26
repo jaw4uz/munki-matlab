@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>_metadata</key>
+	<dict>
+		<key>created_by</key>
+		<string>ascs</string>
+		<key>creation_date</key>
+		<date>2017-07-19T13:56:28Z</date>
+		<key>munki_version</key>
+		<string>2.8.2.2855</string>
+		<key>os_version</key>
+		<string>10.12.5</string>
+	</dict>
+	<key>autoremove</key>
+	<false/>
+	<key>catalogs</key>
+	<array>
+		<string>testing</string>
+		<string>production</string>
+	</array>
+	<key>category</key>
+	<string>Science</string>
+	<key>description</key>
+	<string>Installs the network-licensed version of Matlab R2016b.</string>
+	<key>developer</key>
+	<string>MathWorks</string>
+	<key>display_name</key>
+	<string>Matlab R2016b</string>
+	<key>installer_item_location</key>
+	<string>Science/MatLab/Matlab_Install.dmg</string>
+	<key>installer_type</key>
+	<string>copy_from_dmg</string>
+	<key>installs</key>
+	<array>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.mathworks.matlab</string>
+			<key>CFBundleVersion</key>
+			<string>9.1.0</string>
+			<key>minosversion</key>
+			<string>10.9</string>
+			<key>path</key>
+			<string>/Applications/MATLAB_R2016b.app</string>
+			<key>type</key>
+			<string>application</string>
+			<key>version_comparison_key</key>
+			<string>CFBundleVersion</string>
+		</dict>
+	</array>
+	<key>items_to_copy</key>
+	<array>
+		<dict>
+			<key>destination_path</key>
+			<string>/tmp</string>
+			<key>source_item</key>
+			<string>matlab</string>
+		</dict>
+		<dict>
+			<key>destination_path</key>
+			<string>/var/root/Downloads</string>
+			<key>source_item</key>
+			<string>MathWorks</string>
+		</dict>
+	</array>
+	<key>name</key>
+	<string>Install_MatLab</string>
+	<key>postinstall_script</key>
+	<string>#!/bin/sh
+
+
+# Run the MatLab installer using your customized installer_input.txt
+/tmp/matlab/InstallForMacOSX.app/Contents/MacOS/InstallForMacOSX -inputFile /tmp/matlab/installer_input.txt
+
+# Remove the matlab installer files
+/bin/rm -rf /tmp/matlab
+/bin/rm -rf /var/root/Downloads/MathWorks</string>
+	<key>uninstall_method</key>
+	<string>uninstall_script</string>
+	<key>uninstall_script</key>
+	<string>#!/bin/sh
+/bin/rm -rf /Applications/MATLAB_R2015a.app</string>
+	<key>uninstallable</key>
+	<true/>
+	<key>version</key>
+	<string>9.1.0</string>
+</dict>
+</plist>

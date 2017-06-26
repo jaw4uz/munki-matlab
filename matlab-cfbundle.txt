@@ -1,0 +1,36 @@
+	<dict>
+		<key>created_by</key>
+		<string>ascs</string>
+		<key>creation_date</key>
+		<date>2017-06-13T20:13:24Z</date>
+		<key>munki_version</key>
+		<string>2.8.2.2855</string>
+		<key>os_version</key>
+		<string>10.12.5</string>
+	</dict>
+	<key>autoremove</key>
+	<false/>
+	<key>catalogs</key>
+	<array>
+		<string>testing</string>
+	</array>
+	<key>installs</key>
+	<array>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.mathworks.matlab</string>
+			<key>CFBundleVersion</key>
+			<string>9.1.0</string>
+			<key>minosversion</key>
+			<string>10.9</string>
+			<key>path</key>
+			<string>/Applications/MATLAB_R2016b.app</string>
+			<key>type</key>
+			<string>application</string>
+			<key>version_comparison_key</key>
+			<string>CFBundleVersion</string>
+		</dict>
+	</array>
+	<key>version</key>
+	<string>1.0.0.0.0 (Please edit me!)</string>
+</dict>
