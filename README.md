@@ -8,7 +8,7 @@ You will need to run the GUI installer to download the installer files for your 
 2. Edit or swap out your own installer_input.txt - enter your File Installation Key
 3. Edit or swap out your own network.lic
 4. Create a matlab-installer folder and move the matlab folder into it.
-5. Move the MathWorks folder created by the GUI installer containg the installers into the matlab-installer foler. Make sure not to change any of the folder structer inside.
+5. Move the MathWorks folder created by the GUI installer containg the installers into the matlab-installer foler. Make sure not to change any of the folder structure inside.
 6. Use disk utility to create an image from a folder using the matlab-install folder.
 7. Use munki to copy the MathWorks folder to /var/root/Downloads which is where the MatLab installer will look for it by default.
 8. Use munki to copy the matlab folder to /tmp
