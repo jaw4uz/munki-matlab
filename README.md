@@ -1,3 +1,5 @@
+# I will be trying to rework the Matlab deployment.
+
 # munki-matlab
 Using Munki to install a network licenesed version of MatLab 2016b
 
